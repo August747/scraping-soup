@@ -1,0 +1,25 @@
+{% extends "core/base.html" %}
+
+{% block content%}
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Image</th>
+      <th scope="col">Title</th>
+      <th scope="col">Year</th>
+      <th scope="col">Rating</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for tvshow in tvshows %}
+    <tr>
+      <th scope="row">
+        <img src="{{ tvshow.poster_image}}" alt="">
+      <td>{{ tvshow.title }}</td>
+      <td>{{ tvshow.year}}</td>
+      <td>{{ tvshow.rating}}</td>
+    </tr>
+     {% endfor %}
+  </tbody>
+</table>
+{% endblock %}
